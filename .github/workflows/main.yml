@@ -39,5 +39,6 @@ jobs:
           
       - name: Upload output
         uses: actions/upload-artifact@v3.0.0
+        if: always()
         with:
           path: out.txt

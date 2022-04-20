@@ -36,6 +36,7 @@ jobs:
         run: dotnet test > out.txt
         env:
           DOTNET_SYSTEM_CONSOLE_ALLOW_ANSI_COLOR_REDIRECTION: 1
+          TERM: xterm
           
       - name: Upload output
         uses: actions/upload-artifact@v3.0.0

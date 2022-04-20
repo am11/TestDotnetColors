@@ -33,7 +33,7 @@ jobs:
           dotnet-version: 6.0.x
     
       - name: Build & test (redirected)
-        run: dotnet test > out.txt
+        run: dotnet test | tee out.txt
         env:
           DOTNET_SYSTEM_CONSOLE_ALLOW_ANSI_COLOR_REDIRECTION: 1
           TERM: xterm
